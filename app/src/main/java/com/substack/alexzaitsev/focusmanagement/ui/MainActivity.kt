@@ -3,12 +3,13 @@ package com.substack.alexzaitsev.focusmanagement.ui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.graphics.Color
 import com.substack.alexzaitsev.focusmanagement.ui.screen.mountain.MountainScreen
 import com.substack.alexzaitsev.focusmanagement.ui.screen.ranges.RangesScreen
 import com.substack.alexzaitsev.focusmanagement.ui.theme.FocusManagementTheme
@@ -22,9 +23,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FocusManagementTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    shape = RectangleShape
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Black),
                 ) {
                     NavigationHost()
                 }

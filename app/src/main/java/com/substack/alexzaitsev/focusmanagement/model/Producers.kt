@@ -7,6 +7,15 @@ private const val MIN_MOUNTAINS_PER_RANGE = 5
 private const val MAX_MOUNTAINS_PER_RANGE = 20
 
 fun produceRanges(res: Resources, packageName: String) = listOf(
+    "Mountain 1",
+    "Mountain 2",
+    "Mountain 3",
+    "Mountain 4",
+    "Mountain 5",
+    "Mountain 6",
+    "Mountain 7",
+    "Mountain 8",
+    "Mountain 9",
     "Rocky Mountains",
     "Carpathian Mountains",
     "Alps",
@@ -32,7 +41,8 @@ private fun produceMountain(res: Resources, packageName: String, id: Int) = Moun
     image = res.getDrawableRes(packageName, getRandomPictureNumber())
 )
 
-private fun getRandomMountainsNumber() = (MIN_MOUNTAINS_PER_RANGE..MAX_MOUNTAINS_PER_RANGE).random()
+//private fun getRandomMountainsNumber() = (MIN_MOUNTAINS_PER_RANGE..MAX_MOUNTAINS_PER_RANGE).random()
+private fun getRandomMountainsNumber() = 40
 
 private fun getRandomPictureNumber() = (1..MAX_MOUNTAINS_PER_RANGE).random()
 
